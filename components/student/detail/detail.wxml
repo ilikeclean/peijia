@@ -1,0 +1,26 @@
+<!--components/student/detail/detail.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack>
+    <view slot="content">{{name}}--全部课程</view>
+</cu-custom>
+
+<view>
+  <view class="~cu-bar ~bg-white ~solid-bottom ~margin-top">
+    <view class="~action">
+      <text class="~cuIcon-title ~text-orange "></text> 课程列表
+    </view>
+    <button class="cu-btn cuIcon-add shadow bg-green" bindtap="go" data-newClass="true">开始新课程</button>
+  </view>
+  <view class="~cu-list ~menu-avatar">
+    <view class="~cu-item " wx:for="{{list}}" wx:key="index" style="border-bottom: 1rpx solid #f0f0f0;"
+    bindtap="go" data-classId="{{item._id}}">
+      <view class="~content" style="left: 30rpx;">
+        <view >预约时间：{{item.date}}</view>
+      </view>
+      <view class="~action" style="width: 340rpx;text-align:left" >
+        <view class="~text-blue">上课时间：{{item.startTime}}</view>
+        <view class="~text-grey">结课时间：{{item.endTime}}</view>
+      </view>
+    </view>
+</view>
+  
+</view>

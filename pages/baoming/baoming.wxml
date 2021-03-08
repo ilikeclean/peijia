@@ -1,0 +1,103 @@
+<!--pages/baoming/baoming.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">预约</view>
+</cu-custom>
+<view>
+  <form bindsubmit="submit" bindreset="reset">
+    <view class="cu-form-group margin-top">
+      <view class="title">姓名：</view>
+      <input model:value="{{name}}" placeholder="请输入姓名"></input>
+    </view>
+    <view class="cu-form-group" style="justify-content: normal;">
+      <text class="title">性别：</text>
+      <radio-group bindchange="changeSex">
+        <radio value="男">男</radio>
+        <radio value="女">女</radio>
+      </radio-group>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">手机号码</view>
+      <input type="number" model:value="{{phone}}" placeholder="请输入手机号" maxlength="11"></input>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-blue">
+          +86
+        </view>
+        <view class="cu-tag line-blue">
+          中国大陆
+        </view>
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <text>接送地址：</text>
+      <view bindtap="map">
+        <text wx:if="{{!longitude}}" style="color:blue">点击此处</text>
+        <text wx:else>{{region}}({{street}})</text>
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <text>预约时间：</text>
+      <picker mode="date" start="2021-01-11" bindchange="changeDate" value="{{date}}">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-bar bg-white margin-top">
+      <view class="action">
+        图片上传(若无驾照则忽略)
+      </view>
+      <view class="action">
+        {{imgList.length}}/4
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="upload" wx:if="{{imgList.length<4}}">
+          <text class="cuIcon-cameraadd"></text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{fileID}}" class="c">
+      <image mode="widthFix" src="{{img}}" lazy-load="true"></image>
+    </view>
+    <view class="cu-form-group" style="justify-content: normal;">
+      <text>练车档位：</text>
+      <radio-group bindchange="changeGear">
+        <radio value="手动">手动</radio>
+        <radio value="自动">自动</radio>
+      </radio-group>
+    </view>
+    <view class="cu-form-group" style="justify-content: normal;">
+      <text>练车车型：</text>
+      <radio-group bindchange="changeModel">
+        <radio value="轿车">轿车</radio>
+        <radio value="SUV">SUV</radio>
+      </radio-group>
+    </view>
+    <view class="cu-form-group" style="justify-content: normal;">
+      <text>是否有车：</text>
+      <radio-group bindchange="changeHave">
+        <radio value="是">是</radio>
+        <radio value="否">否</radio>
+      </radio-group>
+    </view>
+    <view class="cu-form-group">
+      <text>教练：</text>
+      <picker value="{{teachers[index].nickName}}" range="{{teachers}}" range-key="nickName" bindchange="changeTeacher">
+        <view class="picker">{{teachers[index].nickName}}</view>
+      </picker>
+    </view>
+    <view class="button cu-form-group">
+      <button style="background:cornflowerblue" size="mini" form-type="reset">重置</button>
+      <button style="background:aquamarine" size="mini" form-type="submit">提交</button>
+    </view>
+  </form>
+</view>

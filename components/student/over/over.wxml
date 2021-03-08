@@ -1,0 +1,17 @@
+<view class="~cu-list ~menu-avatar">
+    <view class="~cu-item" wx:for="{{list}}" wx:key="index">
+      <view class="~cu-avatar ~round ~lg" style="background-image:url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg');"></view>
+      <navigator url="/pages/class/class?userId={{item.userId}}&&classId={{item._id}}" class="~content">
+        <view class="~text-grey">姓名：{{item.name}}</view>
+        <view class="~text-gray ~text-sm ~flex">
+          <text class="~text-cut">
+							<text class="~cuIcon-infofill ~text-red  ~margin-right-xs"></text> 练车车型：{{item.model}}
+          </text>
+        </view>
+      </navigator>
+      <view class="~action" style="width: 140rpx">
+        <view class="~text-grey">结课时间：<view>{{item.endTime}}</view></view>
+        <!-- <view class="~cu-tag ~round ~bg-grey ~sm">5</view> -->
+      </view>
+    </view>
+</view>

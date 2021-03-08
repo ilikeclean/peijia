@@ -1,0 +1,22 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">用户协议</view>
+</cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>软件许可及服务协议</view>
+  <view class='text-content'>
+    <view>Hi！~欢迎使用！</view>
+    <view class='margin-top-sm'>
+      为使用本软件及服务，用户应当阅读并遵守《软件许可及服务协议》（以下简称“本协议”）。请用户务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的单独协议，并选择接受或不接受。限制、免责条款可能以加粗形式提示用户注意。
+
+      除非用户已阅读并接受本协议所有条款，否则用户无权下载、安装或使用本软件及相关服务。用户的下载、安装、使用、获取企业微信服务管理帐号及企业微信最终用户帐号（以下简称：企业微信帐号）、登录等行为即视为用户已阅读并同意上述协议的约束。
+
+      如果用户未满18周岁，请在法定监护人的陪同下阅读本协议及其他上述协议，并特别注意未成年人使用条款。</view>
+    <view class='margin-top-sm'>
+      用户在注册帐号或使用本服务的过程中，需要提供一些必要的个人信息，例如：为向用户提供帐号注册服务或进行用户身份识别，需要填写手机号码；通话功能需要用户授权访问手机通讯录等。若国家法律法规或政策有特殊规定的，用户需要提供真实的身份信息。若用户提供的信息不完整，则无法使用本服务或在使用过程中受到限制。
+    </view>
+    <view class='margin-top-sm'>
+      一般情况下，用户可随时浏览、修改自己提交的信息，但出于安全性和身份识别（如号码申诉服务）的考虑，用户可能无法修改注册时提供的初始注册信息及其他验证信息。</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">订单详情</view>
+</cu-custom>
+<!-- <web-view src="http://pay.epayok.xyz/?appid=30631892&type=2&money=1"></web-view> -->
+<!-- <web-view src="https://pay.muitc.com/submit_qr.php?money=1.00&name=123&notify_url=http&out_trade_no=202086029590&pid=18533&return_url=http&sign_type=MD5&type=alipay&sign=5F6A9291A3C5DA12A4A5216E1D7B19D8"></web-view> -->
+<image src="{{qrcode}}"></image>

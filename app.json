@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/weixin/weixin",
+    "pages/signUp/signUp",
+    "pages/index/index",
+    "pages/baoming/baoming",
+    "pages/class/class",
+    "pages/sign/sign",
+    "pages/message/message",
+    "pages/order/order",
+    "pages/teachersInfo/teacherInfo",
+    "pages/plan/plan",
+    "pages/pingjia/pingjia",
+    "pages/teacher/teacher",
+    "pages/order/orderInfo/orderInfo",
+    "components/student/detail/detail"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

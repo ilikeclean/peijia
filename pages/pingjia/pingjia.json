@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "score":"/components/score/score"
+  },
+  "navigationBarTitleText": "评价教练"
+}

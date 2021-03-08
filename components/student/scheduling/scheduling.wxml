@@ -1,0 +1,24 @@
+<!--components/student/scheduling/scheduling.wxml-->
+<view class="~cu-list ~menu-avatar">
+    <view class="~cu-item {{modalName=='move-box-'+ index?'~move-cur':''}}" 
+    bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}"
+    wx:for="{{list}}" wx:key="index">
+      <view class="~cu-avatar ~round ~lg" style="background-image:url({{item.avatarUrl}});"></view>
+      <navigator url="/components/student/detail/detail?id={{item._id}}&name={{item.name}}" class="~content" >
+        <view class="~text-grey">姓名：{{item.name}}</view>
+        <view class="~text-gray ~text-sm ~flex">
+          <text class="~text-cut">
+							<text class="~cuIcon-phone ~text-red  ~margin-right-xs"></text>{{item.phone}}
+          </text>
+        </view>
+      </navigator>
+      <view class="~action">
+        <view class="~text-grey ~text-xs">22:20</view>
+        <view class="~cu-tag ~round ~bg-grey ~sm">1</view>
+      </view>
+      <view class="~move">
+        <view class="~bg-grey" catchtap="top">置顶</view>
+        <view class="~bg-red" catchtap="delete" id="{{item._id}}">删除</view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-pink" >
+	<view slot="backText">返回</view>
+	<view slot="content">xx陪驾</view>
+</cu-custom>
+<view class='UCenter-bg'>
+  <image src='/resources/images/logo.png' class='png' mode='widthFix'></image>
+  <view class='text-xl'>xx陪驾
+    <text class='text-df'>v1.0</text>
+  </view>
+  <view class='margin-top-sm'>
+    
+  </view>
+</view>
+<view class='padding-xl'>
+  <button  bindtap="login"
+  class='cu-btn  bg-green shadow lg block' >微信登录</button>
+</view>
+

@@ -1,0 +1,117 @@
+<!--pages/plan/plan.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">练车计划</view>
+</cu-custom>
+<view class="cu-timeline">
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">1.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>熟悉车上各操纵机件和仪表、开关按钮的使用</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">2.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>熟练地进行起步和换档操作</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">3.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>正确地使用转向和制动</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">4.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>倒车和坡道起步的操作</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">5.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>车辆运行中后视镜和各种灯光信号的使用</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">6.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>跟车距离、变更车道、超车、会车、让车的体验</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">7.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>通过立交桥、有信号灯和平面交叉路口</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">8.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>通过繁华路段、狭窄路段、凸凹不平路面的驾驶</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">9.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>急弯路驾驶、高速公路或快速公路驾驶</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">10.</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>夜间驾驶</view>
+      </view>
+    </view>   
+  </view>
+</view>

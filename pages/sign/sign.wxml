@@ -1,0 +1,38 @@
+<!--pages/sign/sign.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">签到</view>
+</cu-custom>
+<view class="cu-timeline">
+  <view class="cu-item text-blue"  wx:if="{{startTime}}">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">签到成功</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>签到时间:{{startTime}}</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-blue"  wx:if="{{endTime}}">
+    <view class="bg-gradual-blue content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-blue">签退成功</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>签退时间:{{endTime}}</view>
+      </view>
+    </view>   
+  </view>
+
+  <view style="margin-top:50px">
+    <button style="text-align:center;background: cornflowerblue;" 
+    bindtap="scan" data-code="1" wx:if="{{!startTime}}">扫码签到</button>
+    <button style="text-align:center;background: cornflowerblue;" 
+    bindtap="scan" data-code="2" wx:if="{{startTime && !endTime}}">扫码签退</button>
+  </view>
+  <view style="margin-top:50px" wx:if="{{startTime && endTime}}">
+    <button style="text-align:center;background: cornflowerblue;" bindtap="scan">新课程扫码</button>
+  </view>
+</view>
+

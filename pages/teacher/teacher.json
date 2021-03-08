@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "student":"/components/student/student",
+    "work":"/components/work/work",
+    "rest":"/components/rest/rest",
+    "pay":"/components/pay/pay",
+    "baoxian":"/components/baoxian/baoxian",
+    "xieyi":"/pages/about/about/about"
+  }
+}

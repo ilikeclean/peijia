@@ -1,0 +1,40 @@
+<!-- 教练端 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">陪驾</view>
+</cu-custom>
+<view class="cu-card case">
+  <view class="cu-item shadow" > 
+    <view style="margin-bottom:20rpx">接送地址：
+      <text wx:if="{{class.region}}">{{class.region}}({{class.street}})</text>
+      <text wx:else style="color:blue" bindtap="getLocation">请选择接送地址</text>
+    </view>
+    <view class="image">
+      <map  bindtap="map" latitude="{{class.latitude}}" longitude="{{class.longitude}}" scale="18" markers="{{markers}}">
+      </map>
+      <button bindtap="openSetting" style="background: cornflowerblue;" wx:if="{{setting}}">授权获取位置信息</button>
+    </view>
+  </view>
+
+ 
+  <view class="cu-list menu-avatar" style="display:flex;margin-top:5px">
+    <view wx:if="{{class.startTime}}" class="bg-gradual-pink" style="margin-left:30rpx;padding:0 20rpx">
+      上课时间：{{class.startTime}}
+      <view wx:if="{{class.endTime}}">下课时间：{{class.endTime}}</view>
+      <view>上课时长：{{time}}</view>
+    </view>
+    <button wx:else bindtap="start" size="mini" class="bg-gradual-pink">开始上课</button>
+    <button wx:if="{{class.startTime && !class.endTime}}" bindtap="end" size="mini" class="bg-gradual-orange">下课</button>
+    <button wx:if="{{class.startTime && !class.endTime}}" bindtap="stop" size="mini" class="bg-gradual-orange">结课</button>
+  </view>
+
+  <view class="cu-list menu-avatar" style="text-align:center" wx:if="{{acodeUrl}}">
+    <button size="mini" bindtap="clear" class="bg-gradual-blue">清除二维码</button>
+  </view>
+  <view class="cu-item shadow" wx:if="{{acodeUrl}}">
+    <view class="image radius" style="border: 1px solid #AAA;">
+      <image src="{{acodeUrl}}" show-menu-by-longpress="true"></image>
+    </view>
+  </view>
+
+</view>

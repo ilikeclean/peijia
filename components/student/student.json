@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "studying":"./studying/studying",
+    "scheduling":"./scheduling/scheduling",
+    "over":"./over/over"
+  }
+}

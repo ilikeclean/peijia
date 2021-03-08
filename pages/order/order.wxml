@@ -1,0 +1,50 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">我的订单</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==currentTab?'text-orange cur':''}}" wx:for="{{navTab}}" wx:key="{{index}}" bindtap="switchNav" data-current="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px"
+  bindchange="bindChange">
+  <swiper-item wx:for="{{navTab}}" wx:key="index">
+    <scroll-view class="scrollWrap" scroll-y="true" style='height:{{winHeight}}px;'>
+      <view class="orderList" wx:for="{{orderList}}" wx:key="index" data-item="{{item}}" bindtap='toDetail'>
+        <view class="shop">
+          <view class="shop_name">
+            <image src='/resources/images/yuyue.png' mode='widthFix' lazy-load='true'></image>
+            {{item.startTime}}
+          </view>
+          <text class="state state_taobao">{{item.payamount?'已付款':'待付款'}}</text>
+        </view>
+        <view class="proInfo">
+          <image class="proInfo_img" src='/resources/images/car.png' mode='widthFix' lazy-load='true'></image>
+          <view class="proInfo_right">
+            <view class="proInfo_text">
+              <view class="proInfo_text_title">
+                <text class="iconfont"></text>
+                练车车型：{{item.model}}
+              </view>
+              <text class="iconfont icon-qianjinjiantou"></text>
+            </view>
+            <view class="proInfo_text">
+              <view class="proInfo_text_dtt">{{item.endTime}}</view>
+              <text class="proInfo_text_acount">×1</text>
+            </view>
+          </view>
+        </view>
+        <view class="orderNum">
+          <view>订单号:{{item._id}}</view>
+          <view wx:if="{{item.payamount}}">实付:<text>￥{{item.payamount}}</text></view>
+        </view>
+      </view>
+
+      <view class="no-more" wx:if="{{isNoMoreData}}">------------ 已经到底了 ------------</view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

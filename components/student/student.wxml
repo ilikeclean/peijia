@@ -1,0 +1,20 @@
+<!--pages/student/student.wxml-->
+<cu-custom bgColor="bg-gradual-pink">
+    <view slot="content">学员管理</view>
+  </cu-custom>
+<view class="swiper-tab">
+  <view wx:for="{{navList}}" wx:key="index" class="swiper-tab-list {{currentIndex==index ? 'on_taobao' : ''}}"
+    data-index="{{index}}" bindtap="activeNav">{{item}}</view>
+</view>
+
+<view>
+  <view class="~cu-bar ~bg-white ~solid-bottom ~margin-top">
+    <view class="~action">
+      <text class="~cuIcon-title ~text-orange "></text> 学员列表
+    </view>
+  </view>
+  <studying wx:if="{{currentIndex==0}}"/>
+  <over wx:if="{{currentIndex==1}}"/>
+  <scheduling wx:if="{{currentIndex==2}}"/>
+  
+</view>

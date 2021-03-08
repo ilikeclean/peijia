@@ -1,0 +1,57 @@
+.swiper-tab {
+  width: 100%;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+  text-align: center;
+  line-height: 88rpx;
+  background: #fff;
+  /* position: fixed;
+  top: 0;
+  z-index: 999; */
+}
+
+.swiper-tab-list {
+  font-size: 32rpx;
+  display: inline-block;
+  width: 25%;
+  color: #333;
+  /* font-weight: bold;  */
+}
+
+.on_taobao {
+  position: relative;
+  color: #FF4B0A;
+}
+
+.on_taobao::after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 120rpx;
+  height: 6rpx;
+  content: '';
+  background: linear-gradient(98deg, rgba(252, 111, 3, 1), rgba(255, 143, 3, 1), rgba(253, 93, 17, 1));
+  border-radius: 3rpx;
+}
+
+.nav {
+  white-space: nowrap;
+  padding: 5rpx 0;
+}
+
+.nav-item {
+  padding: 10rpx 50rpx;
+  display: inline-block;
+  color: white;
+}
+
+.nav-item.active {
+  color: #000;
+  border-bottom: #000 1px solid;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}

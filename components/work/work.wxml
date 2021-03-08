@@ -1,0 +1,31 @@
+<!--components/work/work.wxml-->
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">工作日志</view>
+</cu-custom>
+<view class="~cu-bar ~bg-gradual-blue ~search">
+  <open-data type="userAvatarUrl" class="~cu-avatar ~round"></open-data>
+  <!-- <view class="~content"></view> -->
+  <view class="~action" bindtap="add">
+    <text class="~cuIcon-add"></text>
+  </view>
+</view>
+<view class="~cu-form-group"  wx:if="{{add}}">
+  <textarea placeholder="填写今日工作记录..." maxlength="-1" model:value="{{content}}"></textarea>
+  
+</view>
+<view  class="~cu-form-group" style="border-bottom: 1rpx solid #eee;" wx:if="{{add}}">
+  <button bindtap="save"  class="~cu-btn ~bg-gradual-blue ~margin-tb-sm ~lg">提交</button>
+</view>
+<view class="~cu-timeline">
+  <view class="~cu-item ~text-blue" wx:for="{{list}}" bindlongpress="delete" data-id="{{item._id}}">
+    <view class="~bg-gradual-blue ~content ~shadow">
+      <view class="~cu-capsule ~radius">
+        <view class="~cu-tag ~bg-white ~text-blue">{{item.time}}</view>
+        <!-- <view class="cu-tag line-white">2019/04/25</view> -->
+      </view>
+      <view class="~margin-top-sm ~text-content">
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>

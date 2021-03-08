@@ -1,0 +1,4 @@
+/* pages/sign/sign.wxss */
+page{
+  background-color: var(--white);
+}

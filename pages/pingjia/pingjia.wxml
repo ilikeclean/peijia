@@ -1,0 +1,16 @@
+<!--pages/pingjia/pingjia.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">签到</view>
+</cu-custom>
+<view class="cu-form-group margin-top">
+	<score value="{{value}}" bindchange="setValue"></score>
+</view>
+<view class="cu-form-group" style="border-bottom: 1rpx solid #eee;">
+	<textarea maxlength="-1" placeholder="填写意见..." model:value="{{content}}"></textarea>
+</view>
+
+<view style="text-align:center;margin-top:100px">
+	<button bindtap="save"  class="cu-btn bg-red margin-tb-sm lg">提交</button>
+	<view style="color:darkgrey;font-size:33rpx;margin-top:10px" bindtap="pass">跳过</view>
+</view>

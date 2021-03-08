@@ -1,0 +1,15 @@
+/* components/student/over/over.wxss */
+.tab{
+  border-bottom: 1px solid #AAA;
+  padding-top: 20px;
+}
+.look{
+  color: cornflowerblue;
+  float: right;
+  padding-right: 50rpx;
+  font-size: 13px;
+}
+.b3{
+  display: inline-block;
+  width: 65px;
+}

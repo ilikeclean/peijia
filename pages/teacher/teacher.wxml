@@ -1,0 +1,33 @@
+<scroll-view scroll-y class="DrawerPage {{modalName=='viewModal'?'show':''}}">
+  <student wx:if="{{indexId==0}}"></student>
+  <work wx:if="{{indexId==1}}"></work>
+  <rest wx:if="{{indexId==2}}"></rest>
+  <pay wx:if="{{indexId==3}}"></pay>
+  <baoxian wx:if="{{indexId==4}}"></baoxian>
+  <xieyi wx:if="{{indexId==5}}"></xieyi>
+  
+  <view class='padding  text-center foot shadow cu-bar tabbar bg-gradual-pink' style="justify-content:center">
+    <button class='"cuIcon-home cu-btn bg-gradual-pink lg block shadow radius margin-xl' bindtap="showModal"
+      data-target="viewModal">
+      <!-- 打开抽屉 -->
+    </button>
+    <button class='"cuIcon-usefull cu-btn bg-gradual-pink lg block shadow radius margin-xl' bindtap="switch">
+      学生端</button>
+  </view>
+</scroll-view>
+<view class="DrawerClose {{modalName=='viewModal'?'show':''}}" bindtap="hideModal">
+  <text class="cuIcon-pullright"></text>
+</view>
+<scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
+  <cu-custom bgColor="bg-gradual-pink">
+    <view slot="content">xx陪驾</view>
+  </cu-custom>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-item arrow" wx:for="{{tabs}}" wx:key="index">
+      <view class="content" bindtap='jumpIndex' data-menuindex='{{index}}'>
+        <text class="cuIcon-github text-grey"></text>
+        <text class="text-{{indexId==index?'red':'grey'}}">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
